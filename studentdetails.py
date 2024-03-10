@@ -1,6 +1,7 @@
 #TO GET STUDENT DETAILS
 
 def main():
+    print("----welcome to sreyas school----")
     print("\t1)TO GET THE STUDENT DETAILS")
     print("\t2)TO ADD NEW STUDENT DETAILS")
     print("\t3)TO REMOVE STUDENT DETAILS")
