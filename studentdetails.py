@@ -13,3 +13,20 @@ def main():
     option=input("ENTER ABOVE ANY OPTION:")
     print()
     
+    if option=='1':
+        pass
+    elif option=='2':
+        pass
+    elif option=='3':
+        pass
+    elif option=='4':
+        pass
+    elif option=='5':
+        pass
+    elif option=='6':
+        pass
+    elif option=='7':
+        pass
+    elif option=='8':
+        pass
+    
