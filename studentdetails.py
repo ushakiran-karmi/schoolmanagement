@@ -6,10 +6,35 @@ class Student:
         self.name=input("Enter the name")
         self.phone_number=input("Enter the student phone number")
         self.address=input("Enter the student phone number")
-        self.student_class=input("Enter the student class [ex:1,2,3,4,5,6,7,8,9,10]")
+        student_class=input("Enter the student class [ex:1,2,3,4,5,6,7,8,9,10]")
+        
+        if student_class in StudentClass.classes:
+            StudentClass.classes[student_class].studentList.append(self)
+        else:
+            new_class=StudentClass(student_class)
+            new_class.studentList.append(self)
+            StudentClass.classes[student_class]=new_class    
+        self.student_class=StudentClass.classes[student_class]  
+        print("\nStudnet added successfully")
+        
+    def getStudent(self):
+        print("\n STUDENT DETAILS")
+        print("\tRoll number:",self.roll_no)
+        print("\t Name",self.name)
+        print("\tPhoneNumber",self.phone_number)
+        print("\t Address",self.address)
+        print("\tClass",self.student_class.name)
+        print("\t SchoolName:SREYAS")
+              
+                
 
 
-
+class StudentClass:
+    classes ={}
+    def __init__(self,name):
+        self.name=name
+        StudentClass.classes[name]=self
+        self.studentList=[]
 
 def main():
     print("----welcome to sreyas school----")
@@ -26,9 +51,16 @@ def main():
     print()
     
     if option=='1':
-        pass
+        roll_no=input("\tenter the roll number of a student")
+        try:
+            Student.student_dictionary[roll_no].getStudent()
+        except:
+            print("\t\tyou have entered the wrong roll number")    
+        
     elif option=='2':
-        pass
+        new_student=Student()
+        Student.student_dictionary[new_student.roll_no]=new_student
+        
     elif option=='3':
         pass
     elif option=='4':
