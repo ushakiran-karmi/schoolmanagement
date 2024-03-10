@@ -1,5 +1,16 @@
 #TO GET STUDENT DETAILS
 
+class Student:
+    def __init__(self):
+        self.roll_no=input("Enter the roll number")
+        self.name=input("Enter the name")
+        self.phone_number=input("Enter the student phone number")
+        self.address=input("Enter the student phone number")
+        self.student_class=input("Enter the student class [ex:1,2,3,4,5,6,7,8,9,10]")
+
+
+
+
 def main():
     print("----welcome to sreyas school----")
     print("\t1)TO GET THE STUDENT DETAILS")
